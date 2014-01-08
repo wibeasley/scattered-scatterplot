@@ -113,16 +113,17 @@
 
 			//On click, update with new data			
 			d3.select("input")
-				.on("click", function() {
+				//.on("click", function() {
+				.on("mouseleave", function() {
 
 					//New values for dataset
 					var numValues = dataset.length;						 		//Count original length of dataset
 					var maxRange = Math.random() * 1000;						//Max range of new values
 					dataset = [];  						 				 		//Initialize empty array
 					for (var i = 0; i < numValues; i++) {				 		//Loop numValues times
-						var newNumber1 = Math.floor(Math.random() * maxRange);	//New random integer
-						var newNumber2 = Math.floor(Math.random() * maxRange);	//New random integer
-						dataset.push([newNumber1, newNumber2]);					//Add new number to array
+						var x = Math.floor(Math.random() * maxRange);	//New random integer
+						var y = Math.floor(Math.random() * maxRange);	//New random integer
+						dataset.push([x, y]);					//Add new number to array
 					}
 					
 					//Update scale domains

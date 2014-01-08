@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3: SVG Image</title>
+		<script type="text/javascript" src="d3.v3.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Create SVG element
+			var canvas = d3.select("body")
+						.append("svg")
+						.attr("width", 500)
+						.attr("height", 400)
+						.attr("stroke", "black");
+
+			canvas.append("circle")
+				.attr("cx", 100)
+				.attr("cy", 30)
+				.attr("r", 20)
+				.attr("fill", "red")
+				.attr("stroke-width", 2);
+				
+			canvas.append("circle")
+				.attr("cx", 200)
+				.attr("cy", 30)
+				.attr("r", 20)
+				.attr("fill", "red")
+				.attr("stroke-width", 2);
+				
+			canvas.append("circle")
+				.attr("cx", 150)
+				.attr("cy", 100)
+				.attr("r", 60)
+				.attr("fill", "darkblue")
+				.attr("stroke-width", 2);
+				
+				//canvas.remove
+		</script>
+	</body>
+</html>

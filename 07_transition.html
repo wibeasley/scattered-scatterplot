@@ -91,15 +91,22 @@
 			   })
 			   .attr("cy", h)
 			   .attr("r", 1)
+			   
 			   .transition()
 			   .duration(2000)
+			   
 			   .attr("cy", function(d) {
 				   return d.y;
 			   })
 			   .attr("r", function(d) {
 				   return d.r;
-			   });
+			   })
+			   .transition()
+			   .duration(2000)
 			
+				.attr("cy", h)
+			   .attr("r", 1);
+			   
 		</script>
 	</body>
 </html>
